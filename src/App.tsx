@@ -251,7 +251,7 @@ class App extends React.Component<
                 </Button>
 
                 <FormGroup>
-                  <Label for='baseAnnualPremium'>Result</Label>
+                  <Label for='baseAnnualPremium'>Sum Assured</Label>
                   <Input
                     type='text'
                     disabled={true}
@@ -354,7 +354,9 @@ class App extends React.Component<
                 </Button>
 
                 <FormGroup>
-                  <Label for='baseAnnualPremium'>Result</Label>
+                  <Label for='baseAnnualPremium'>
+                    Premium Per {paymentFrequency}
+                  </Label>
                   <Input
                     type='text'
                     disabled={true}
