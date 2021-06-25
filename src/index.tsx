@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import CreateModel from './CreateModel';
+import Table from './Table';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from 'react-redux';
@@ -11,6 +12,7 @@ const store = configureStore();
 const Root = () => (
   <Provider store={store}>
     <CreateModel />
+    <Table />
   </Provider>
 );
 ReactDOM.render(<Root />, document.getElementById('root') as HTMLElement);

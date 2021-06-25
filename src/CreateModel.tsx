@@ -17,8 +17,8 @@ import {
 import { useDispatch } from 'react-redux';
 import { addTodo } from './store/calculator/actions';
 import * as R from 'ramda';
-
 import axios from 'axios';
+
 var DatePicker = require('reactstrap-date-picker');
 const Todo = () => {
   const [activeTab, setActiveTab] = useState('1');
@@ -41,20 +41,15 @@ const Todo = () => {
 
   const handleButtonClick = () => {
     const todo = model;
+    console.log(model);
     dispatch(addTodo(todo));
-    setTodoMessage({
-      name: '',
-      genderCd: '',
-      dob: new Date().toISOString(),
-      planCode: '',
-      premiumPerYear: 0,
-      paymentFrequency: '',
-      saPerYear: 0,
-    });
   };
 
   const handeOnChange = (event: any) => {
-    setTodoMessage(event);
+    setTodoMessage({
+      ...model,
+      ...event,
+    });
   };
 
   return (
