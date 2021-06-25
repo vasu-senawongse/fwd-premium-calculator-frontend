@@ -1,9 +1,11 @@
 import { createStore, combineReducers } from 'redux';
 
-import { calculatorReducer } from './calculator/reducers';
+import { calSumAssuredReducer } from './calSumAssured/reducers';
+import { calPremiumReducer } from './calPremium/reducers';
 
 const rootReducer = combineReducers({
-  calculatorReducer,
+  calSumAssuredReducer,
+  calPremiumReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

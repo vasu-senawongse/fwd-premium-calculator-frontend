@@ -1,21 +1,21 @@
 import {
-  CalculatorState,
-  CalculatorActionInterface,
-  CalculatorActionType,
+  calPremiumState,
+  calPremiumInterface,
+  calPremiumActionType,
 } from './interfaces';
 
-const initialState: CalculatorState = {
+const initialState: calPremiumState = {
   models: [],
 };
 
-export function calculatorReducer(
+export function calPremiumReducer(
   state = initialState,
-  action: CalculatorActionInterface
-): CalculatorState {
+  action: calPremiumInterface
+): calPremiumState {
   switch (action.type) {
-    case CalculatorActionType.ADD_TODO:
+    case calPremiumActionType.ADD_TODO:
       return { models: [...state.models, action.payload] };
-    case CalculatorActionType.DELETE_TODO:
+    case calPremiumActionType.DELETE_TODO:
       return {
         models: state.models.filter((todo, index) => index !== action.payload),
       };

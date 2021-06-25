@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getTodoState } from './store/calculator/selectors';
-import { deleteTodo } from './store/calculator/actions';
+import { getTodoState } from './store/calPremium/selectors';
+import { deleteTodo } from './store/calPremium/actions';
 const TodoTable = () => {
-  const todos = useSelector(getTodoState);
+  const models = useSelector(getTodoState);
   const dispatch = useDispatch();
   const handleClick = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -17,17 +17,28 @@ const TodoTable = () => {
         <thead>
           <tr>
             <th>#</th>
-            <th>Todo</th>
-
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Date of Birth</th>
+            <th>planCode</th>
+            <th>Sum Assured / Year</th>
+            <th>Payment Frequency</th>
+            <th>Base Annual Premium</th>
             <th>Action</th>
           </tr>
         </thead>
         <tbody>
-          {todos.map((todo, key) => {
+          {models.map((model, key) => {
             return (
               <tr key={key}>
                 <td>{key + 1}</td>
-                <td>{todo.name}</td>
+                <td>{model.name}</td>
+                <td>{model.genderCd}</td>
+                <td>{model.dob}</td>
+                <td>{model.planCode}</td>
+                <td>{model.saPerYear}</td>
+                <td>{model.paymentFrequency}</td>
+                <td>{model.baseAnnualPremium}</td>
                 <td>
                   <button
                     className='button is-danger'
