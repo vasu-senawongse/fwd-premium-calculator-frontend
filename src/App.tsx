@@ -194,6 +194,7 @@ class App extends React.Component<
                     id='dob'
                     name='dob'
                     value={dob}
+                    dateFormat='DD/MM/YYYY'
                     onChange={(e: any) => this.onValueChanged({ dob: e })}
                   />
                 </FormGroup>
@@ -297,6 +298,7 @@ class App extends React.Component<
                     id='dob'
                     name='dob'
                     value={dob}
+                    dateFormat='DD/MM/YYYY'
                     onChange={(e: any) => this.onValueChanged({ dob: e })}
                   />
                 </FormGroup>

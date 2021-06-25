@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  fwd-frontend-react:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fwd-frontend-react
+    restart: unless-stopped
+    volumes:
+      - .:/app
+      - ./docker/nginx:/etc/nginx/config.d
+    ports:
+      - '3000:3000'
+
+networks:
+  default:
+    external:
+      name: test-network
