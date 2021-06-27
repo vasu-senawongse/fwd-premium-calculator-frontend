@@ -1,62 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the component 1`] = `
-<div
-  className="App"
+exports[`Should renders the Calc SA name input 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "@@observable": [Function],
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "@@observable": [Function],
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
 >
-  <header
-    className="App-header"
-  >
-    <img
-      alt="logo"
-      className="App-logo"
-      src="logo.png"
-    />
-    <Nav
-      tabs={true}
-      tag="ul"
-      vertical={false}
-    >
-      <NavItem
-        tag="li"
-      >
-        <NavLink
-          className="active"
-          onClick={[Function]}
-          tag="a"
-        >
-          Calc SA
-        </NavLink>
-      </NavItem>
-      <NavItem
-        tag="li"
-      >
-        <NavLink
-          className=""
-          onClick={[Function]}
-          tag="a"
-        >
-          Calc Premium
-        </NavLink>
-      </NavItem>
-    </Nav>
-    <TabContent
-      activeTab="1"
-      tag="div"
-    >
-      <TabPane
-        tabId="1"
-        tag="div"
-      >
-        <Todo />
-      </TabPane>
-      <TabPane
-        tabId="2"
-        tag="div"
-      >
-        <Todo />
-      </TabPane>
-    </TabContent>
-  </header>
-</div>
+  <App />
+</ContextProvider>
 `;

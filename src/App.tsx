@@ -5,7 +5,6 @@ import CalPremium from './CalPremium';
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import logo from './logo.png';
 import classnames from 'classnames';
-
 const App = () => {
   const [activeTab, setActiveTab] = useState('1');
 
