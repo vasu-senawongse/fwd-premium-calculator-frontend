@@ -48,92 +48,130 @@ const Todo = () => {
     <div>
       <Form>
         <FormGroup>
-          <Label for='name'>Name</Label>
+          <Label for='SA-name'>Name</Label>
           <Input
             type='text'
-            name='name'
-            id='name'
+            name='SA-name'
+            id='SA-name'
             placeholder='Your name ...'
             value={model.name}
+            required
             onChange={(e) => handeOnChange({ name: e.target.value })}
           />{' '}
         </FormGroup>
         <FormGroup>
-          <Label for='genderCd'>Gender</Label>
+          <Label for='SA-genderCd'>Gender</Label>
           <Input
             type='select'
-            name='genderCd'
-            id='genderCd'
+            name='SA-genderCd'
+            id='SA-genderCd'
+            required
             value={model.genderCd}
             onChange={(e) => handeOnChange({ genderCd: e.target.value })}
           >
             <option value=''>-- SELECT GENDER --</option>
-            <option value='MALE'>MALE</option>
-            <option value='FEMALE'>FEMALE</option>
+            <option id='SA-genderCd-Male' value='MALE'>
+              MALE
+            </option>
+            <option id='SA-genderCd-Female' value='FEMALE'>
+              FEMALE
+            </option>
           </Input>
         </FormGroup>
         <FormGroup>
           <Label for='dob'>Date of Birth</Label>
           <DatePicker
-            id='dob'
-            name='dob'
+            id='SA-dob'
+            name='SA-dob'
             value={model.dob}
+            required
             dateFormat='DD/MM/YYYY'
             onChange={(e: any) => handeOnChange({ dob: e })}
           />
         </FormGroup>
         <FormGroup>
-          <Label for='planCode'>Plan</Label>
+          <Label for='SA-planCode'>Plan</Label>
           <Input
             type='select'
-            name='planCode'
-            id='planCode'
+            name='SA-planCode'
+            id='SA-planCode'
+            required
             value={model.planCode}
             onChange={(e) => handeOnChange({ planCode: e.target.value })}
           >
             <option value=''>-- SELECT PLAN --</option>
-            <option value='T11A20'>package 1 (benefit 200k)</option>
-            <option value='T11A50'>package 2 (benefit 500k)</option>
-            <option value='T11AM1'>package 3 (benefit 1M)</option>
+            <option id='SA-T11A20' value='T11A20'>
+              package 1 (benefit 200k)
+            </option>
+            <option id='SA-T11A50' value='T11A50'>
+              package 2 (benefit 500k)
+            </option>
+            <option id='SA-T11AM1' value='T11AM1'>
+              package 3 (benefit 1M)
+            </option>
           </Input>
         </FormGroup>
         <FormGroup>
-          <Label for='premiumPerYear'>Premium / Year</Label>
+          <Label for='SA-premiumPerYear'>Premium / Year</Label>
           <Input
             type='number'
-            name='premiumPerYear'
-            id='premiumPerYear'
+            name='SA-premiumPerYear'
+            id='SA-premiumPerYear'
+            required
             placeholder='Premium/Year ...'
             value={model.premiumPerYear}
             onChange={(e) => handeOnChange({ premiumPerYear: e.target.value })}
           />
         </FormGroup>
         <FormGroup>
-          <Label for='paymentFrequency'>Payment Frequency</Label>
+          <Label for='SA-paymentFrequency'>Payment Frequency</Label>
           <Input
             type='select'
-            name='paymentFrequency'
-            id='paymentFrequency'
+            name='SA-paymentFrequency'
+            id='SA-paymentFrequency'
             value={model.paymentFrequency}
+            required
             onChange={(e) =>
               handeOnChange({ paymentFrequency: e.target.value })
             }
           >
             <option value=''>-- SELECT PAYMENT FREQUENCY --</option>
-            <option value='YEARLY'>YEARLY</option>
-            <option value='HALFYEARLY'>HALFYEARLY</option>
-            <option value='QUARTERLY'>QUARTERLY</option>
-            <option value='MONTHLY'>MONTHLY</option>
+            <option id='SA-paymentFrequency-YEARLY' value='YEARLY'>
+              YEARLY
+            </option>
+            <option id='SA-paymentFrequency-HALFYEARLY' value='HALFYEARLY'>
+              HALFYEARLY
+            </option>
+            <option id='SA-paymentFrequency-QUARTERLY' value='QUARTERLY'>
+              QUARTERLY
+            </option>
+            <option id='SA-paymentFrequency-MONTHLY' value='MONTHLY'>
+              MONTHLY
+            </option>
           </Input>
         </FormGroup>
 
-        <Button color='success' onClick={() => handleButtonClick()}>
+        <Button
+          id='SA-submit'
+          color='success'
+          disabled={
+            model.name == '' ||
+            model.genderCd == '' ||
+            model.dob == null ||
+            model.premiumPerYear == 0 ||
+            model.planCode == '' ||
+            model.paymentFrequency == ''
+          }
+          onClick={() => handleButtonClick()}
+        >
           Submit
         </Button>
 
         <FormGroup>
-          <Label for='baseSumAssured'>Sum Assured</Label>
+          <Label for='SA-baseSumAssured'>Sum Assured</Label>
           <Input
+            id='SA-baseSumAssured'
+            name='SA-baseSumAssured'
             type='text'
             disabled={true}
             value={model.baseSumAssured}

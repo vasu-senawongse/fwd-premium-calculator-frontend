@@ -13,9 +13,9 @@ export function calSumAssuredReducer(
   action: calSumAssuredActionInterface
 ): calSumAssuredState {
   switch (action.type) {
-    case calSumAssuredActionType.ADD_TODO:
+    case calSumAssuredActionType.ADD_SA:
       return { models: [...state.models, action.payload] };
-    case calSumAssuredActionType.DELETE_TODO:
+    case calSumAssuredActionType.DELETE_SA:
       return {
         models: state.models.filter((todo, index) => index !== action.payload),
       };

@@ -13,8 +13,8 @@ export interface calPremiumState {
 }
 
 export enum calPremiumActionType {
-  ADD_TODO = 'ADD_TODO',
-  DELETE_TODO = 'DELETE_TODO',
+  ADD_PM = 'ADD_PM',
+  DELETE_PM = 'DELETE_PM',
 }
 
 export type calPremiumAction = calPremiumActionType;

@@ -13,8 +13,8 @@ export interface calSumAssuredState {
 }
 
 export enum calSumAssuredActionType {
-  ADD_TODO = 'ADD_TODO',
-  DELETE_TODO = 'DELETE_TODO',
+  ADD_SA = 'ADD_SA',
+  DELETE_SA = 'DELETE_SA',
 }
 
 export type calSumAssuredAction = calSumAssuredActionType;

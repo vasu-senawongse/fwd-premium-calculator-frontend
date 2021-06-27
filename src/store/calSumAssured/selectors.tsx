@@ -1,5 +1,5 @@
 import { RootState } from '..';
 
-export function getTodoState(state: RootState) {
+export function getSaState(state: RootState) {
   return state.calSumAssuredReducer.models;
 }

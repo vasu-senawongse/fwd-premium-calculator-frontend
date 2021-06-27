@@ -1,5 +1,5 @@
 import { RootState } from '..';
 
-export function getTodoState(state: RootState) {
+export function getPmState(state: RootState) {
   return state.calPremiumReducer.models;
 }

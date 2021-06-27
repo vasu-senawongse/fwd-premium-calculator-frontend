@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getTodoState } from './store/calSumAssured/selectors';
+import { getSaState } from './store/calSumAssured/selectors';
 import { deleteTodo } from './store/calSumAssured/actions';
 const TodoTable = () => {
-  const models = useSelector(getTodoState);
+  const models = useSelector(getSaState);
   const dispatch = useDispatch();
   const handleClick = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>

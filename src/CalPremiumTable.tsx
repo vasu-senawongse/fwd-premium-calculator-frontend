@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getTodoState } from './store/calPremium/selectors';
+import { getPmState } from './store/calPremium/selectors';
 import { deleteTodo } from './store/calPremium/actions';
 const TodoTable = () => {
-  const models = useSelector(getTodoState);
+  const models = useSelector(getPmState);
   const dispatch = useDispatch();
   const handleClick = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>

@@ -13,9 +13,9 @@ export function calPremiumReducer(
   action: calPremiumInterface
 ): calPremiumState {
   switch (action.type) {
-    case calPremiumActionType.ADD_TODO:
+    case calPremiumActionType.ADD_PM:
       return { models: [...state.models, action.payload] };
-    case calPremiumActionType.DELETE_TODO:
+    case calPremiumActionType.DELETE_PM:
       return {
         models: state.models.filter((todo, index) => index !== action.payload),
       };
