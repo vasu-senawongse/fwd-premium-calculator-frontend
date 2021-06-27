@@ -132,7 +132,7 @@ const Todo = () => {
         </Button>
 
         <FormGroup>
-          <Label for='baseAnnualPremium'>Sum Assured</Label>
+          <Label for='baseSumAssured'>Sum Assured</Label>
           <Input
             type='text'
             disabled={true}

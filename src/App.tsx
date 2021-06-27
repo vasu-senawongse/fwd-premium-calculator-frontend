@@ -21,6 +21,7 @@ const App = () => {
         <Nav tabs>
           <NavItem>
             <NavLink
+              id='tab1'
               className={classnames({ active: activeTab === '1' })}
               onClick={() => {
                 toggle('1');
@@ -31,6 +32,7 @@ const App = () => {
           </NavItem>
           <NavItem>
             <NavLink
+              id='tab2'
               className={classnames({ active: activeTab === '2' })}
               onClick={() => {
                 toggle('2');
